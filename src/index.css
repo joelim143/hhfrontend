@@ -12,31 +12,44 @@ code {
     monospace;
 }
 
-button {
-  width: 100%;
-  max-width: 300px; /* Ensure all buttons have the same max width */
-  margin: 0 auto; /* Center the buttons */
-  color: white !important; /* Ensure text color is white */
-  padding: 15px 20px; /* Increase padding for better appearance */
-}
-
-button.bg-blue-600 {
-  background-color: #3b82f6 !important; /* Nicer blue color */
-}
-
-button.bg-yellow-600 {
-  background-color: #facc15 !important; /* Nicer yellow color */
-}
-
-button.bg-green-600 {
-  background-color: #22c55e !important; /* Nicer green color */
-}
-
 .button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem; /* Increase spacing between buttons */
-  justify-content: center; /* Center the buttons on the page */
-  height: 100vh; /* Ensure the container takes full height */
+  gap: 1rem; /* Reduce spacing between buttons */
+  justify-content: flex-start; /* Align buttons towards the top */
+  height: auto; /* Adjust height to fit content */
+  margin-top: 20px; /* Reduce margin to bring buttons closer to header */
+}
+
+.button {
+  width: 100%;
+  max-width: 300px; /* Ensure all buttons have the same max width */
+  min-width: 250px; /* Ensure all buttons have the same min width */
+  margin: 0 auto; /* Center the buttons */
+  color: black !important; /* Ensure text color is black */
+  padding: 15px 20px; /* Increase padding for better appearance */
+  text-align: center; /* Center the text */
+}
+
+.button.bg-blue-500 {
+  background-color: #3b82f6 !important; /* Nicer blue color */
+}
+
+.button.bg-yellow-500 {
+  background-color: #facc15 !important; /* Nicer yellow color */
+}
+
+.button.bg-green-500 {
+  background-color: #22c55e !important; /* Nicer green color */
+}
+
+.button.bg-gray-500 {
+  background-color: #6b7280 !important; /* Nicer gray color */
+}
+
+.button.bg-maroon-500 {
+  background-color: #800000 !important; /* Maroon color */
+  border: 2px solid #FFD700 !important; /* Gold outline */
+  color: #FFD700 !important; /* Gold text color */
 }

@@ -86,26 +86,28 @@ const ContactList = () => {
                 <td>{contact.skills || 'N/A'}</td>
                 <td>{contact.approval_status || 'Pending'}</td>
                 <td>
-                  <Link to={`/edit-contact/${contact.contact_id }`} className="btn btn-warning me-2">
-                    Edit
-                  </Link>
-                  <button className="btn btn-danger me-2" onClick={() => handleDelete(contact.contact_id)}>
-                    Delete
-                  </button>
-                  <button
-                    className="btn btn-success me-2"
-                    onClick={() => updateApprovalStatus(contact.contact_id, 'Approved')}
-                    disabled={contact.approval_status === 'Approved'}
-                  >
-                    Approve
-                  </button>
-                  <button
-                    className="btn btn-secondary"
-                    onClick={() => updateApprovalStatus(contact.contact_id, 'Rejected')}
-                    disabled={contact.approval_status === 'Rejected'}
-                  >
-                    Reject
-                  </button>
+                  <div className="d-flex justify-content-between"> {/* Flex container for buttons */}
+                    <Link to={`/edit-contact/${contact.contact_id}`} className="btn btn-warning me-2">
+                      Edit
+                    </Link>
+                    <button className="btn btn-danger me-2" onClick={() => handleDelete(contact.contact_id)}>
+                      Delete
+                    </button>
+                    <button
+                      className="btn btn-success me-2"
+                      onClick={() => updateApprovalStatus(contact.contact_id, 'Approved')}
+                      disabled={contact.approval_status === 'Approved'}
+                    >
+                      Approve
+                    </button>
+                    <button
+                      className="btn btn-secondary"
+                      onClick={() => updateApprovalStatus(contact.contact_id, 'Rejected')}
+                      disabled={contact.approval_status === 'Rejected'}
+                    >
+                      Reject
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))
